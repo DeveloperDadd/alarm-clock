@@ -1,18 +1,9 @@
-function updateTime () {
-  let currentTime = new Date();
-  let hour = currentTime.getHours();
-  let minute = currentTime.getMinutes();
-  let seconds = currentTime.getSeconds();
-  hour = formatTime(hour);
-  minute = formatTime(minute);
-  seconds = formatTime(seconds);
-  let time = document.getElementById("time").innerHTML = hour + ":" + minute + ":" + seconds;
-  setInterval(updateTime, 1000);
-};
 
-
-function formatTime(time) {
-    if (time < 10) {
-        return "0" + time;
-    }
+function updateTime() {
+let time = new Date();
+let hour = time.getHours();
+let min = time.getMinutes();
+let sec = time.getSeconds();
+document.getElementById("time").innerHTML = hour + ":" + min + ":" + sec;
+setTimeout(updateTime, 1000);
 }
