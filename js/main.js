@@ -8,6 +8,8 @@ function format(i) {
   }
 }
 
+//Sets an alarm to 07:00 am
+let defaultAlarm = "07:00:00";
 
 //this function retrieves the time in hours, minutes, and seconds and displays them in the DOM
 function updateTime() {
@@ -15,17 +17,15 @@ function updateTime() {
   let hour = format(time.getHours());
   let min = format(time.getMinutes());
   let sec = format(time.getSeconds());
-  document.getElementById("time").innerHTML = hour + ":" + min + ":" + sec;
+  let currentTime = hour + ":" + min + ":" + sec;
+  document.getElementById("time").innerHTML = currentTime;
+  if (currentTime === defaultAlarm) {
+    alert("WAKE UP! IT'S TIME TO CODE!");
+  }
 }
 
 //This function updates the time every second
 setInterval(updateTime, 1000);
 
-
-//Sets an alarm to 07:00 am
-let defaultAlarm = new Date();
-defaultAlarm.setHours(7);
-defaultAlarm.setMinutes(0);
-defaultAlarm.setSeconds(0);
-
+//function to sound alarm if defaultAlarm === currentTime
 
