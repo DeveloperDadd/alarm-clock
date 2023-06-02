@@ -8,6 +8,7 @@ function format(i) {
   }
 }
 
+
 //this function retrieves the time in hours, minutes, and seconds and displays them in the DOM
 function updateTime() {
   let time = new Date();
@@ -20,4 +21,11 @@ function updateTime() {
 //This function updates the time every second
 setInterval(updateTime, 1000);
 
-alarmTime = setTime()
+
+//Sets an alarm to 07:00 am
+let defaultAlarm = new Date();
+defaultAlarm.setHours(7);
+defaultAlarm.setMinutes(0);
+defaultAlarm.setSeconds(0);
+
+
