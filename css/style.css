@@ -32,7 +32,8 @@ body {
     box-shadow: 1px 2px 3px 4px rgba(20,20,20,0.4);   
 }
 
-#time {
+
+#date, #time {
     font-weight: 500;
     font-size: 64px;
     color: #BF5111;
