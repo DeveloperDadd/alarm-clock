@@ -8,7 +8,8 @@
 
 body {
     font-family: 'Poppins', Helvetica, sans-serif;
-    background: linear-gradient(188deg, rgba(138,140,69,1) 39%, rgba(190,191,142,1) 75%);
+    background: url(https://www.reproduction-gallery.com/catalogue/uploads/1522662218_large-image_dali-persistence-of-memory-lg.jpg);
+    background-size: cover;
 }
 
 .container {
