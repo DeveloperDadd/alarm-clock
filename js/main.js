@@ -27,5 +27,14 @@ function updateTime() {
 //This function updates the time every second
 setInterval(updateTime, 1000);
 
-//function to sound alarm if defaultAlarm === currentTime
+//function for when the button is clicked store the time in this variable  
+let button = document.getElementById("submitTime");
+let userAlarm
 
+button.addEventListener('click', () => {
+  let timeInput = document.getElementById("setAlarm");
+  userAlarm = timeInput.value;
+  document.getElementById("userAlarm").innerHTML = userAlarm;
+})
+
+console.log(userAlarm);
